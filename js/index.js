@@ -1,3 +1,16 @@
+let productsHTML = "";
+
+products.forEach((product) => {
+  productsHTML += `
+    <div class="product-box">
+      <img src="${product.image}" alt="" class="product-img">
+      <h2 class="product-title">${product.name}</h2>
+      <span class="price">${(product.priceCents / 100).toFixed(2)}</span>
+      <i class='bx bx-shopping-bag add-cart'></i>
+    </div>
+  `;
+});
+document.querySelector(".js-shop-content").innerHTML = productsHTML;
 // Cart
 let cartIcon = document.querySelector("#cart-icon");
 let cart = document.querySelector(".cart");
